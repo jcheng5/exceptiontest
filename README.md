@@ -7,6 +7,7 @@ Repro:
 1. Run `exceptiontest::throwAndCatchInterrupt()`, note that it prints `Interrupted` (the desired behavior).
 2. Run the following code (will create a separate compilation unit):
 ```r
+library(exceptiontest)
 Rcpp::cppFunction('
 void throwAndCatchInterrupt2() {
   typedef void (*tifunc)();
